@@ -1,24 +1,19 @@
 import React, { Component } from "react";
-import "./App.css";
-import Graph from "./Graph";
-import Nav from "./components/nav.component";
+import { Switch, Route } from "react-router-dom";
+import Layout from "./layout/layout.component";
+import Graph from "./graph/graph.component";
+
+const Hi = () => <h1> Hello World </h1>;
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <Nav />
-        <section className="section">
-          <div className="container">
-            <h1 className="title">Hello World</h1>
-            <p className="subtitle">
-              My first website with <strong>Bulma</strong>!
-            </p>
-            <a className="button">Button</a>
-            <Graph />
-          </div>
-        </section>
-      </div>
+      <Layout>
+        <Switch>
+          <Route exact path="/" component={Hi} />
+          <Route path="/graph" component={Graph} />
+        </Switch>
+      </Layout>
     );
   }
 }

@@ -65,6 +65,7 @@ const events = {
 
 export default () => (
   <div>
+    {console.log("OIOIOI")}
     <h1>React graph vis</h1>
     <p>
       <a href="https://github.com/crubier/react-graph-vis">Github</a> -{" "}
@@ -84,6 +85,7 @@ export default () => (
       Rendered graphs are scrollable, zoomable, retina ready, dynamic, and
       switch layout on double click.
     </p>
+    <i class="fas fa-user" />
 
     <Graph
       graph={graph}
